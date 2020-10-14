@@ -1,0 +1,4 @@
+ocker pull mongo
+sudo docker run -it -v mongodata:/data/db -p 27017:27017 --name mongodb -d mongo
+
+curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data '{"name": "chemise", "description": "chemise bleu"}' "http://localhost:8080/products"
